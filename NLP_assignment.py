@@ -27,14 +27,12 @@ print(items)
 from operator import itemgetter
 sorted_items = sorted(items,key=itemgetter(1),reverse=True)
 top10 = sorted_items[:10]
-
-print('----------------------------------------')
 print(top10)
 
 
 
 df = pd.DataFrame(top10,columns=["Trends","Volume"])
-print(df)
+
 
 import matplotlib.pyplot as plt
 
@@ -49,7 +47,7 @@ plt.show()
 print('---------------------------------------PART 2 ---------------------------------------------')
 items =[i for i in items if i[1]>20000]
 items_dict = dict(items)
-print(items_dict)
+
 
 
 
